@@ -1,6 +1,7 @@
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useQuery } from '../hooks/useQuery'
+// import { slugNyheder } from '../utils/slugNyheder'
 
 export default function Nyheder1() {
 
