@@ -2,6 +2,8 @@ import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useQuery } from '../hooks/useQuery'
 // import { slugNyheder } from '../utils/slugNyheder'
+import pen from '../assets/pen.png'
+import trash from '../assets/trash.png'
 
 export default function Nyheder1() {
 
@@ -19,6 +21,8 @@ console.log(data);
                 )}
                 <p>{item.fields.description && documentToReactComponents(item.fields.description)}</p>
             </div> )}
+            <img src={pen} alt="Edit" />
+            <img src={trash} alt="Delete" />
 
         </div>
     )
