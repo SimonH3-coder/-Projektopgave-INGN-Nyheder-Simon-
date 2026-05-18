@@ -5,7 +5,7 @@ import bars from '../../assets/bars.png'
 export function Navbar() {
 const linkClassName = ({ isActive }) => (isActive ? ' font-Roboto' : 'text-[#000000] font-Roboto');
     return (
-        <nav className="flex flex-col font-['Roboto']">
+        <nav className="flex flex-row font-['Roboto']">
             <h1 className="absolute top-8 left-20 p-8  text-[#C52525] font-Roboto">INGN</h1>
             <div>
                 <NavLink to="/" className="p-4 m-4" className={linkClassName}>|Alle|</NavLink>
