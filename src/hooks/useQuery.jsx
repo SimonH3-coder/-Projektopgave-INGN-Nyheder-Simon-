@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export function useQuery(url) {
     const [data, setData] = useState(null);
     
+    
     useEffect(() => {
         const client = createClient ({
             space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -23,6 +24,6 @@ export function useQuery(url) {
     console.log(data);
    console.log('imageurl', data?.items[0]?.fields.image.fields.file.url);
     
-    return { data };
+    return { data};
 
 }

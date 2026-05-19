@@ -1,7 +1,5 @@
-export function politik() {
+export function Politik() {
     return (
-        <div>
-            <h1>Nyheder Politik</h1>
-        </div>
+        <CardBody kategori="politik" />
     )
 }

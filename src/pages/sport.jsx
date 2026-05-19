@@ -1,7 +1,5 @@
-export function sport() {
+export function Sport() {
     return (
-        <div>
-            <h1>Nyheder Sport</h1>
-        </div>
+        <CardBody kategori="sport" />
     )
 }

@@ -1,7 +1,5 @@
-export function teknologi() {
+export function Teknologi() {
     return (
-        <div>
-            <h1>Nyheder Teknologi</h1>
-        </div>
+        <CardBody kategori="teknologi" />
     )
 }

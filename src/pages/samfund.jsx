@@ -1,7 +1,5 @@
-export function samfund() {
+export function Samfund() {
     return (
-        <div>
-            <h1>Nyheder Samfund</h1>
-        </div>
+        <CardBody kategori="samfund" />
     )
 }

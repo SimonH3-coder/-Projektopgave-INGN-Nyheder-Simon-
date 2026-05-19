@@ -1,7 +1,5 @@
-export function udland() {
+export function Udland() {
     return (
-        <div>
-            <h1>Nyheder Udland</h1>
-        </div>
+        <CardBody kategori="udland" />
     )
 }

@@ -11,6 +11,9 @@ query ($slug: String!) {
         items {
             title
             slug
+            dato
+            skribent
+            kategori
             description {
                 json
             }
