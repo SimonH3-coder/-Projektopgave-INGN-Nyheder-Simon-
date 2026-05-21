@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { createClient } from 'contentful'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+// import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 export function useQuery(url) {
     const [data, setData] = useState(null);
-    
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
     
     useEffect(() => {
+        setIsLoading(true);
         const client = createClient ({
             space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
     environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT,
@@ -16,14 +18,17 @@ export function useQuery(url) {
         .getEntries({ content_type: 'projektopgaveIngnNyhederSimon' })
         .then((response) => {
             setData(response);
+            setIsLoading(false);
         })
         .catch((error) => {
             console.error('Error fetching data:', error);
+            setError(error);
+            setIsLoading(false);
         });
     }, []);
-    console.log(data);
-   console.log('imageurl', data?.items[0]?.fields.image.fields.file.url);
+//     console.log(data);
+//    console.log('imageurl', data?.items[0]?.fields.image.fields.file.url);
     
-    return { data};
+    return { data, isLoading, error};
 
 }

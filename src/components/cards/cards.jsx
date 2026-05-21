@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 export const Cards = ({ items }) => {
     if ( !items) {
         return null;
@@ -18,11 +19,12 @@ export const Cards = ({ items }) => {
                 <p>D. {date} - af {items.skribent}</p>
                 <p>
                     <Link to={`/artikel/${items.slug} || items.id`}>
-                    <button className="minButton">Se mere</button>
+                    <button className="minButton">Læs mere</button>
                     </Link>
                 </p>
                 {items.image?.url && <img src={items.image.url} alt="" />}
-                
+                 
+  '
             </div>
         </section>
     )
