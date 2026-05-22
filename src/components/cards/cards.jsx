@@ -22,10 +22,10 @@ export const Cards = ({ items }) => {
                     <button className="minButton">Læs mere</button>
                     </Link>
                 </p>
+                </div>
                 {items.image?.url && <img src={items.image.url} alt="" />}
                  
   '
-            </div>
         </section>
     )
 }

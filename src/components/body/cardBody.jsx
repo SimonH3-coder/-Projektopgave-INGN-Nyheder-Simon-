@@ -1,3 +1,4 @@
+// Lavet med hjælp lidt fra cotpilot
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useQuery } from '../../hooks/useQuery'
@@ -27,7 +28,7 @@ export const CardBody = ({kategori}) => {
     }
 
     return (
-        <main className="min-h-screen bg-neutral-100 px-4 py-6 sm:px-6 lg:px-8">
+        <main className=" font-(family-name:--font-roboto-flex) min-h-screen bg-neutral-100 px-4 py-6 sm:px-6 lg:px-8">
         <section className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2 xl:grid-cols-3">
 
             {items.map((item, index) => {
@@ -75,13 +76,13 @@ export const CardBody = ({kategori}) => {
                     to={`/artikel/${item.fields.slug || item.sys.id}`}
                     className="block"
                   >
-                    <h2 className="text-lg font-semibold leading-tight text-neutral-900 transition group-hover:text-red-700 sm:text-xl">
+                    <h2 className=" font-roboto text-lg font-semibold leading-tight text-neutral-900 transition group-hover:text-red-700 sm:text-xl">
                       {item.fields.titel}
                     </h2>
                   </Link>
 
                   <p className="text-xs text-neutral-500">
-                    {item.fields.dato} · {item.fields.skribent || 'skribent'}
+                    {item.fields.dato} · {item.fields.Skribent || 'skribent'}
                   </p>
                 </div>
 
